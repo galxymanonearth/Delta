@@ -7,14 +7,14 @@ const path = require('path');
 
 process.on('uncaughtException', (err) => {
   console.error(err);
-  bot.executeWebhook('592768515199467550', '8MAad-Hf8Bjfd1gyC1q5u0Ym6Talruh34gvy2q1qaYTvqkovzs9J_ht30jqln3-g9dB7', {
+  bot.executeWebhook(config.webhooks.logs.ID, config.webhooks.logs.token, {
     content: `\`\`\`sh\n${err}\n\`\`\``
   })
 });
 
 process.on('unhandledRejection', (err) => {
   console.error(err.stack);
-  bot.executeWebhook('592768515199467550', '8MAad-Hf8Bjfd1gyC1q5u0Ym6Talruh34gvy2q1qaYTvqkovzs9J_ht30jqln3-g9dB7', {
+  bot.executeWebhook(config.webhooks.logs.ID, config.webhooks.logs.token, {
     content: `\`\`\`sh\n${err}\n\`\`\``
   })
 });
