@@ -1,4 +1,4 @@
-const config = require('../../config.json');
+const config = require('../config');
 const util = require('util');
 
 module.exports = bot => ({
@@ -17,7 +17,7 @@ module.exports = bot => ({
           return bot.createMessage(msg.channel.id, `\`\`\`js\n${err}\`\`\``);
       }
 
-      evaled = evaled.replace(bot.token, 'a big baguette');
+      evaled = evaled.replace(bot.token, 'no.');
 
       const fullLen = evaled.length;
 
@@ -44,6 +44,6 @@ module.exports = bot => ({
         aliases: ['e'],
         hidden: true,
         requirements: {
-          userIDs: [config.ownersIDs]
+          userIDs: config.ownersIDs
         }
     }})

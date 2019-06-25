@@ -1,4 +1,4 @@
-const config = require('../../config.json');
+const config = require('../config');
 
 module.exports = bot => ({
     label: 'restart',
@@ -11,7 +11,7 @@ module.exports = bot => ({
         aliases: ['r'],
         hidden: true,
         requirements: {
-            userIDs: [config.ownersIDs]
+            userIDs: config.ownersIDs
         }
     }
 })

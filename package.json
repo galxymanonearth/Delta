@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.2",
     "eris": "^0.10.0",
     "mongoose": "^5.6.1"
   }

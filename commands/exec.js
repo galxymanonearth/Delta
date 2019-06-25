@@ -1,4 +1,4 @@
-const config = require('../../config.json');
+const config = require('../config');
 const { exec } = require('child_process');
 const util = require('util');
 
@@ -30,6 +30,6 @@ options: {
     aliases: ['ex'],
     hidden: true,
     requirements: {
-      userIDs: [config.ownersIDs]
+      userIDs: config.ownersIDs
     }
 }})

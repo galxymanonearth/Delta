@@ -11,8 +11,8 @@ module.exports = bot => ({
                 },
                 fields: [
                     {
-                        name: 'Creator',
-                        value: 'Hector#6704',
+                        name: 'Owners',
+                        value: 'Hector#6704 and Frosty#8199',
                         inline: true
                     },
                     {
@@ -32,7 +32,7 @@ module.exports = bot => ({
                     },
                     {
                         name: 'Invite',
-                        value: '[Click here](https://discordapp.com/api/oauth2/authorize?client_id=534632914445664267&permissions=8&scope=bot)',
+                        value: `[Click here](https://discordapp.com/api/oauth2/authorize?client_id=${bot.uder.id}&permissions=8&scope=bot)`,
                         inline: true
                     },
                     {
@@ -42,7 +42,7 @@ module.exports = bot => ({
                     }
                 ],
                 footer: {
-                    text: `${bot.user.username} | Bot ID: 534632914445664267`,
+                    text: `${bot.user.username} | Bot ID: ${bot.user.id}`,
                     icon_url: bot.user.avatarURL
                 }
                 }
