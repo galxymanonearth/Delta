@@ -7,5 +7,9 @@
     "test": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "eris": "^0.10.0",
+    "mongoose": "^5.6.1"
+  }
 }
