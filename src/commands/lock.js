@@ -1,7 +1,7 @@
 const config = require('../../config')
 
 module.exports = bot => ({
-    label: 'dehoist',
+    label: 'lock',
     execute: async (msg, args) => {
     if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
     if (args[0]) {
