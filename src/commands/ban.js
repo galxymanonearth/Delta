@@ -1,12 +1,12 @@
-const config = require('../config');
+const config = require('../../config');
 const util = require('util');
-const resolveMember = require('../functions/resolveMember.js');
+const utils = require('../utils');
 const sleep = util.promisify(setTimeout);
 
 async function banUser (bot, msg, requirements) {
     let { user, args } = requirements
     try {
-      let botUser = resolveMember(msg.channel.guild, bot.user.id);
+      let botUser = utils.resolveMember(msg.channel.guild, bot.user.id);
       if (!botUser) {
         return bot.createMessage(msg.channel.id, `${config.emotes.error} I can\'t verify my permissions. I can\'t ban that user.`)
       }
@@ -31,7 +31,7 @@ async function banUser (bot, msg, requirements) {
     execute: async (msg, args) => {
       let kicke = args[0]
       if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null
-      let user = resolveMember(msg.channel.guild, kicke);
+      let user = utils.resolveMember(msg.channel.guild, kicke);
       let userType = 'member'
       if (!user) {
         let rUser = await bot.getRESTUser(args[0]).catch(() => bot.createMessage(msg.channel.id, '<a:aRedTick:585167776973586447> User not found.'))
@@ -61,7 +61,7 @@ async function banUser (bot, msg, requirements) {
             const users = [];
             for (const id of ids) {
                 let add = true;
-                let user = resolveMember(msg.channel.guild, id);
+                let user = utils.resolveMember(msg.channel.guild, id);
                 if (!user && id.match(/^\d+$/) ) {
                     user = await bot.getRESTUser(id).catch( () => {
                             add = false;

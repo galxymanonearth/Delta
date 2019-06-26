@@ -1,4 +1,7 @@
-const defaultConfig = {
+const fs = require('fs');
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+if (!config) {
+    config = {
         "token": process.env.TOKEN,
         "mongoDBURL": null,
         "prefix": "/",
@@ -10,6 +13,6 @@ const defaultConfig = {
                 "token": process.env.LOGS_WEBHOOK_TOKEN
             }
         }
-}
+    }}
 
-module.exports = defaultConfig;
+module.exports = config;

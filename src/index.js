@@ -1,5 +1,5 @@
-const bot = require('./bot.js');
-const config = require('./config.json');
+const bot = require('../bot');
+const config = require('../config');
 const util = require('util');
 const chalk = require('chalk');
 const fs = require('fs');

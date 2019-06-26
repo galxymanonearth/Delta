@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const config = require('../config.json')
+const config = require('../../config')
 module.exports = bot => {
   bot.editStatus('online', {name: 'Other bots of the Hack Week Event', type: 3});
   console.log(chalk.green('[SYSTEM] - Connected to Discord'));

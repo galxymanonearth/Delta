@@ -1,11 +1,11 @@
 {
-  "name": "hecfrost",
+  "name": "delta",
   "version": "1.0.0",
   "description": "A bot made in Eris for the Discord Hack Week Event",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "start": "node index.js"
+    "test": "node src/index.js",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
