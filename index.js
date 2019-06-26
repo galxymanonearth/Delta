@@ -28,7 +28,7 @@ function read() {
       console.log(chalk.blue(`[LOAD] - Loaded ${command.label}`));
       if (command.subcommands)  {
         for (let subcmd of command.subcommands) { 
-            cmd.registerSubcommand(subcmd.name, subcmd.execute, subcmd.options)
+            cmd.registerSubcommand(subcmd.label, subcmd.execute, subcmd.options)
         }}
     });
   });

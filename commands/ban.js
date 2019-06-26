@@ -51,7 +51,7 @@ async function banUser (bot, msg, requirements) {
     },
     subcommands: [
       {
-        name: 'mass',
+        label: 'mass',
         execute: async (msg, args) => {
           if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
           args = args.join(' ').split(' | ');
@@ -116,7 +116,7 @@ async function banUser (bot, msg, requirements) {
                 }
               },
               {
-                name: 'match',
+                label: 'match',
                 execute: async (msg, args) => {
                   if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
                   let query;

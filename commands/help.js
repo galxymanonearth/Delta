@@ -47,7 +47,7 @@ module.exports = bot => ({
             if (subcommands.length > 0) {
                 const finale = { name: 'Subcommands', value: [] };
                 for (let subcmd of subcommands) {
-                    const cur = `\`${msg.prefix}${command.label} ${subcmd.name}\` - ${subcmd.description}`;
+                    const cur = `\`${msg.prefix}${command.label} ${subcmd.label}\` - ${subcmd.description}`;
                     finale.value.push(cur);
                 }
                 finale.value = finale.value.join('\n');
