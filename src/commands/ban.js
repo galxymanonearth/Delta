@@ -30,7 +30,7 @@ async function banUser (bot, msg, requirements) {
     label: 'ban',
     execute: async (msg, args) => {
       let kicke = args[0]
-      if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null
+      if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
       let user = utils.resolveMember(msg.channel.guild, kicke);
       let userType = 'member'
       if (!user) {

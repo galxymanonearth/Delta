@@ -26,7 +26,7 @@ module.exports = bot => ({
       }
 
       if (fullLen > 2000) {
-          evaled = evaled.match(/[\s\S]{1,1900}[\n\r]/g) || [];
+          evaled = evaled.match(/[\s\S]{1,2000}[\n\r]/g) || [];
           if (evaled.length > 3) {
               bot.createMessage(msg.channel.id, `\`\`\`js\n${evaled[0]}\`\`\``);
               bot.createMessage(msg.channel.id, `\`\`\`js\n${evaled[1]}\`\`\``);
