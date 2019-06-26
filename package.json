@@ -4,8 +4,8 @@
   "description": "A bot made in Eris for the Discord Hack Week Event",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "npm start"
+    "test": "node index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
