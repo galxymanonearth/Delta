@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4d43041130a403ea6ea52400048f1eb)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hector6704/Delta&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.com/Hector6704/Delta.svg?token=WgWmtscifLJBWxjKMBRq&branch=master)](https://travis-ci.com/Hector6704/Delta)
+
 # Delta
 ![Hack Week Event](https://images-ext-1.discordapp.net/external/tfj720alwqFs_mZovQVpNZ0WWf6DRFbd5IHAxja8KdM/https/cdn-images-1.medium.com/max/1200/1%2Alh6NS8hx0pu5mlZeSqnu5w.jpeg)
 
