@@ -19,9 +19,9 @@ module.exports = bot => ({
                         }
                     }
                 })
-            }
+            } else {
             if (!bot.commands[args[0].toLowerCase()]) {
-                return bot.createMessage(msg.channel.id, `<a:aRedTick:585167776973586447> Command not found, use \`${msg.prefix}help\` to get a list of commands.`);
+                return bot.createMessage(msg.channel.id, `${config.emotes.error} Command not found, use \`${msg.prefix}help\` to get a list of commands.`);
             }
             const command = bot.commands[args[0].toLowerCase()];
             const subcommands = Object.values(command.subcommands);
@@ -59,7 +59,7 @@ module.exports = bot => ({
             return bot.createMessage(msg.channel.id, {
                 embed: mess
             });
-        },
+        }},
     options: {
         description: 'This help text',
         usage: 'help (command)',
