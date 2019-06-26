@@ -1,8 +1,8 @@
 {
-    "token": process.env.TOKEN, // Replace that by your bot token
-    "mongoDBURL": "mongodb://localhost/Delta", // your mongoDB URL
-    "prefix": "/", // Bot prefix
-    "ownersIDs": ["377781496292835339", "401760501387755520"], // array of bot owners IDs
+    "token": "NTkyNzY1ODc3MjE3MjYzNjM5.XREH9A.EW66c9XgxeDYkzqWwFhEyRvd2co",
+    "mongoDBURL": "mongodb://localhost/Delta",
+    "prefix": "/",
+    "ownersIDs": ["377781496292835339", "401760501387755520"],
     "emotes": {
         "success": "<a:aGreenTick:585165117964943360>",
         "error": "<a:aRedTick:585167776973586447>",
@@ -11,7 +11,7 @@
     "webhooks": {
         "logs": {
             "ID": "592768515199467550",
-            "token": process.env.LOGS_WEBHOOK_TOKEN
+            "token": "8MAad-Hf8Bjfd1gyC1q5u0Ym6Talruh34gvy2q1qaYTvqkovzs9J_ht30jqln3-g9dB7"
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+    "token": "YOUR_BOT_TOKEN",
+    "mongoDBURL": "mongodb://localhost/Delta",
+    "prefix": "/",
+    "ownersIDs": ["id1", "id2"],
+    "emotes": {
+        "success": "<:green_tick:1234>",
+        "error": "<:red_tick:5678>",
+        "loading": "<a:loading:9101112>"
+    },
+    "webhooks": {
+        "logs": {
+            "ID": "1234",
+            "token": "WEBHOOK_TOKEN"
+        }
+    }
+}
