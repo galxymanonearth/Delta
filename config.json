@@ -1,0 +1,17 @@
+{
+    "token": process.env.TOKEN, // Replace that by your bot token
+    "mongoDBURL": "mongodb://localhost/Delta", // your mongoDB URL
+    "prefix": "/", // Bot prefix
+    "ownersIDs": ["377781496292835339", "401760501387755520"], // array of bot owners IDs
+    "emotes": {
+        "success": "<a:aGreenTick:585165117964943360>",
+        "error": "<a:aRedTick:585167776973586447>",
+        "loading": "<a:loading:446974970669695014>"
+    },
+    "webhooks": {
+        "logs": {
+            "ID": "592768515199467550",
+            "token": process.env.LOGS_WEBHOOK_TOKEN
+        }
+    }
+}
