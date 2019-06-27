@@ -1,6 +1,6 @@
 module.exports = bot => ({
     label: 'info',
-    execute: async(msg) => {
+    execute: (msg) => {
         msg.channel.createMessage({
             embed: {
                 title: 'Bot Information',

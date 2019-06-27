@@ -3,7 +3,7 @@
 # Delta
 ![Hack Week Event](https://images-ext-1.discordapp.net/external/tfj720alwqFs_mZovQVpNZ0WWf6DRFbd5IHAxja8KdM/https/cdn-images-1.medium.com/max/1200/1%2Alh6NS8hx0pu5mlZeSqnu5w.jpeg)
 
-Delta is a bot for advanced moderation, made for the Discord Hack Week Event.
+Delta is a bot for advanced moderation, made for the Discord Hack Week Event. You can invite the hosted version [here](https://discordapp.com/api/oauth2/authorize?client_id=592765877217263639&permissions=0&scope=bot)
 
 ## Creators
 [Hector](https://github.com/Hector6704) and [Frosty](https://github.com/FrostedFrost).
