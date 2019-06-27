@@ -32,7 +32,7 @@ module.exports = bot => ({
                     },
                     {
                         name: 'Invite',
-                        value: `[Click here](https://discordapp.com/api/oauth2/authorize?client_id=${bot.uder.id}&permissions=8&scope=bot)`,
+                        value: `[Click here](https://discordapp.com/api/oauth2/authorize?client_id=${bot.user.id}&permissions=8&scope=bot)`,
                         inline: true
                     },
                     {
