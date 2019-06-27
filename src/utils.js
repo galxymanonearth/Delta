@@ -1,3 +1,5 @@
+const bot = require('../bot')
+
 function resolveMember (guild, arg) {
 
     if (!arg || !guild || guild.avalaible) {
@@ -8,5 +10,31 @@ function resolveMember (guild, arg) {
   
     return user;
 }
-  
-module.exports = resolveMember;
+
+function resolveUser (arg) {
+  if (!arg) {
+    return null
+  }
+
+  const user = bot.users.find(uzer => uzer.id === arg.replace('!', '').replace(/<@|>/g, '') || uzer.username.toLowerCase().startsWith(arg.toLowerCase()) || uzer.username.toLowerCase() === arg.toLowerCase() || `${uzer.username.toLowerCase()}#${uzer.discriminator}` === arg.toLowerCase())
+
+  return user;
+
+}
+
+function resolveChannel (guild, arg) {
+
+  if (!guild || !arg) {
+    return null;
+  }
+
+  let channel = guild.channels.find(chan => chan.id === arg || chan.id === arg.replace(/<#|>/g, '') || chan.name === arg.toLowerCase());
+
+  return channel;
+}
+
+module.exports = {
+  resolveMember,
+  resolveUser,
+  resolveChannel
+}
