@@ -29,9 +29,8 @@ async function banUser (bot, msg, requirements) {
   module.exports = bot => ({
     label: 'ban',
     execute: async (msg, args) => {
-      let kicke = args[0]
       if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
-      let user = utils.resolveMember(msg.channel.guild, kicke);
+      let user = utils.resolveMember(msg.channel.guild, args[0]);
       let userType = 'member'
       if (!user) {
         let rUser = await bot.getRESTUser(args[0]).catch(() => bot.createMessage(msg.channel.id, '<a:aRedTick:585167776973586447> User not found.'))
@@ -202,7 +201,6 @@ async function banUser (bot, msg, requirements) {
     ],
     options: {
         description: 'Ban a user',
-        usage: 'ban [user]',
-        limitedto: 'Administrator/Manager'
+        usage: 'ban [user] (reason)'
     }
 })
