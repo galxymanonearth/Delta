@@ -8,7 +8,7 @@ async function banUser (bot, msg, requirements) {
     try {
       let botUser = utils.resolveMember(msg.channel.guild, bot.user.id);
       if (!botUser) {
-        return bot.createMessage(msg.channel.id, `${config.emotes.error} I can\'t verify my permissions. I can\'t ban that user.`)
+        return `${config.emotes.error} I can\'t verify my permissions. I can\'t ban that user.`
       }
       if (!botUser.permission.has('administrator') && !botUser.permission.has('manageGuild') && !botUser.permission.has('banMembers')) {
         return `${config.emotes.error} I don\'t have the permission to ban that user.`

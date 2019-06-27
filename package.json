@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node src/index.js",
+    "pull": "git pull origin master",
     "start": "node src/index.js"
   },
   "author": "",
