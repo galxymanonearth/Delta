@@ -15,7 +15,7 @@ module.exports = bot => ({
             if (!botUser) {
               return bot.createMessage(msg.channel.id, `${config.emotes.error} I can\'t verify my permissions. I can\'t lock that channel.`)
             }
-            if (!botUser.permission.has('administrator') && !botUser.permission.has('manageGuild') && !botUser.permission.has('manageChannels')) {
+            if (!botUser.permission.has('manageChannels') && !botUser.permission.has('manageGuild') && !botUser.permission.has('manageChannels')) {
               return `${config.emotes.error} I don\'t have the permission to lock that channel.`
             }
             try {
