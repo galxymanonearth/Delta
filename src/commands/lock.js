@@ -7,6 +7,9 @@ module.exports = bot => ({
     if (!msg.member.permission.has('banMembers' || 'manageGuild' || 'administrator')) return null;
     if (args[0]) {
             const channel = utils.resolveChannel(msg.channel.guild, args[0]);
+            if (!channel) {
+              return msg.channel.createMessage(`${config.emotes.error} CHannel not found.`)
+            }
             let channelPerms = channel.permissionOverwrites.find(p => p.id === msg.channel.guild.id);
             if (channelPerms.has('sendMessages')) {
                 return msg.channel.createMessage(`${config.emotes.error} That channel is already locked.`)
