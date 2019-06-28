@@ -114,7 +114,8 @@ async function banUser (bot, msg, requirements) {
                   }});
                 },
                 options: {
-                  description: 'Ban a list of user IDs.'
+                  description: 'Ban a list of user IDs.',
+                  usage: 'ban mass [ID] [ID] [ID] | (reason)'
                 }
               },
               {
@@ -195,7 +196,8 @@ async function banUser (bot, msg, requirements) {
                           }});
                         },
                         options: {
-                          description: 'Ban all the users who sent a specified message in the last 100 messages.'
+                          description: 'Ban all the users who sent a specified message in the last 100 messages.',
+                          usage: 'ban match [message content] | (reason)'
                         }
                 }
     ],
