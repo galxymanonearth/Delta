@@ -200,7 +200,7 @@ async function banUser (bot, msg, requirements) {
                 }
     ],
     options: {
-        description: 'Ban a user',
+        description: 'Ban a user. Subcommands: \`mass\`, \`match\`',
         usage: 'ban [user] (reason)'
     }
 })
