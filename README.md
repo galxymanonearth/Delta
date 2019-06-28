@@ -12,7 +12,7 @@ You can try it [here](https://discord.gg/YhJ3ng8)
 
 ## Features
 - Advanced ban command: Ban multiples users (up to 30) with `/ban mass`. Ban all the users that send a specific message (in the last 100 messages) with `/ban match`. This is very useful if your server gets attacked by user bots. And obviously, you can also use the classic `/ban` command
-- Lock your server/categories/channels with the lock command.
+- Lock your channels or categories with the lock command.
 
 ## How to install
 1. Clone the repo: `git clone https://github.com/Hector6704/Delta`
