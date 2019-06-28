@@ -23,7 +23,7 @@ module.exports = bot => ({
             }
             try {
                 channel.editPermission(msg.channel.guild.id, channelPerms.allow | 2048, channelPerms.deny, 'role', 'Unlock');
-                return msg.channel.createMessage(`${config.emotes.success} Unlocked channel <#${channel.id}>.`)
+                return msg.channel.createMessage(`${config.emotes.success} Unlocked ${channel.id.mention}.`)
             } catch (err) {
                 return msg.channel.createMessage(`${config.emotes.error} An unknown error occured: \n\`\`\`\n${err}\n\`\`\``)
             }
