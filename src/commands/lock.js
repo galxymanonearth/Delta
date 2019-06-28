@@ -8,12 +8,9 @@ module.exports = bot => ({
     if (args[0]) {
             const channel = utils.resolveChannel(msg.channel.guild, args[0]);
             if (!channel) {
-              return msg.channel.createMessage(`${config.emotes.error} CHannel not found.`)
+              return msg.channel.createMessage(`${config.emotes.error} Channel not found.`)
             }
             let channelPerms = channel.permissionOverwrites.find(p => p.id === msg.channel.guild.id);
-            if (channelPerms.has('sendMessages')) {
-                return msg.channel.createMessage(`${config.emotes.error} That channel is already locked.`)
-            }
             let botUser = utils.resolveMember(msg.channel.guild, bot.user.id);
             if (!botUser) {
               return bot.createMessage(msg.channel.id, `${config.emotes.error} I can\'t verify my permissions. I can\'t lock that channel.`)
@@ -23,14 +20,18 @@ module.exports = bot => ({
             }
             try {
                 channel.editPermission(msg.channel.guild.id, channelPerms.allow, channelPerms.deny | 2048, 'role', 'Lock');
-                return msg.channel.createMessage(`${config.emotes.success} Locked ${channel.mention}.`)
+                if (channel.type == '4') {
+                  return msg.channel.createMessage(`${config.emotes.success} Locked category \`${channel.name}\`.`)
+                } else if (channel.type == '0') {
+                  return msg.channel.createMessage(`${config.emotes.success} Locked channel ${channel.mention}.`)
+                }
             } catch (err) {
                 return msg.channel.createMessage(`${config.emotes.error} An unknown error occured: \n\`\`\`\n${err}\n\`\`\``)
             }
         }
       },
       options: {
-        description: 'Lock a channel',
-        usage: 'lock [channel]'
+        description: 'Lock a channel or a category',
+        usage: 'lock [channel / category ID]'
       }
 })
